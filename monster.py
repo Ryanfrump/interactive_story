@@ -14,7 +14,13 @@ class Monster(ABC):
 
 
 
-class Goblin(Monster): pass
+class Goblin(Monster):
+    def __init__(self, name: str, damage: int, health: int) -> None:
+        super().__init__(name = "goblin", damage = 1, health = 4)
+        self.name = name
+        self.damage = damage
+        self.health = health
+    
 
 class Orc(Monster): pass 
 
