@@ -1,15 +1,21 @@
 from abc import ABC, abstractmethod
 
-
+class GameObject(ABC)
+    abstractmethod
+    def use(self)
+        pass
 class Player:
-    def __init__(self, name:str, starting_object:str, age:int) -> None:
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
-        self.starting_object = []
+        self.inventory= []
         self.age = age
-        self.dictionary = dict()
+        self.health = 100
+    
+    def take_damage(self, damage: int) -> None:
+        self.health -= damage
 
     @abstractmethod
-    def ability(self,age:int):
+    def ability(self,age: int):
         if 10<= age >=20:
             return "Your ability is flea! +2 to any flea dice roll."
         elif 21<= age >=30:
@@ -18,6 +24,7 @@ class Player:
             return "Your ability is enhanced intellect! +2 to any percesption roll."
         else:
             return "No age entered, please try again."
+
 from player import Player
 from monster import Monster
 from weapon import Weapon
@@ -36,7 +43,10 @@ class Monster(ABC):
         pass
 
 
-class Goblin(Monster): pass
+class Goblin(Monster):
+    def monster_ability(self, player: Player) -> None:
+        player.take_damage(self.damage)
+        pass
 
 class Orc(Monster): pass 
 
