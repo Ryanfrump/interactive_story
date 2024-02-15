@@ -1,10 +1,15 @@
 from abc import ABC, abstractmethod
 class Player:
-    def __init__(self, name:str, starting_object:str, age:int) -> None:
+    def __init__(self, name:str, starting_object:str, inventory:list[str], age:int) -> None:
         self.name = name
         self.starting_object = []
         self.age = age
         self.dictionary = dict()
+        self.health = 100
+        self.inventory = []
+
+    def take_damage(self, damage: int) -> None:
+          self.health -= damage    
     @abstractmethod
     def ability(self,age:int):
         if 10<= age >=20:
