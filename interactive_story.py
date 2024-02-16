@@ -1,6 +1,6 @@
 from player import Player
-from monster import Monster
 import path1
+import path2
 
 
 
@@ -22,7 +22,7 @@ print(path_choice)
 if path_choice == "path1":
     path1.func_path1()
 elif path_choice == "path2":
-    print("almost yay")
+    path2.func_path2()
 else:
-    print("Not yay")
+    print("Not a path")
 
