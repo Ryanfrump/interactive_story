@@ -1,5 +1,6 @@
 from player import Player
 from monster import Monster
+import path1
 
 
 
@@ -19,7 +20,7 @@ print(welcome_message)
 path_choice = input("Which path will you chose path1 or path2?: ")
 print(path_choice)
 if path_choice == "path1":
-    print("yay")
+    path1.func_path1()
 elif path_choice == "path2":
     print("almost yay")
 else:
