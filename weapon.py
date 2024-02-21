@@ -1,10 +1,5 @@
 class Weapon:
     def __init__(self, name: str, damage: int) -> None:
-        self.name = name    
-        self.damage = damage
-
-class Weapon:
-    def __init__(self, name: str, damage: int) -> None:
         self.name = name
         self.damage = damage
 
@@ -19,3 +14,7 @@ class Wand(Weapon):
 class Bow(Weapon):
     def __init__(self) -> None:
         super().__init__(name="Bow", damage=12        
+
+
+
+        

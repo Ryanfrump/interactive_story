@@ -15,17 +15,36 @@ class Monster(ABC):
 
 
 class Goblin(Monster):
-    def __init__(self, name: str, damage: int, health: int) -> None:
-        super().__init__(name = "goblin", damage = 1, health = 4)
-        self.name = name
-        self.damage = damage
-        self.health = health
+    def __init__(self) -> None:
+        super().__init__(name ="Goblin", damage =1, health =4)
+        
     
 
-class Orc(Monster): pass 
+class Orc(Monster): 
+    def __init__(self) -> None:
+        super().__init__(name="Orc", damage=3, health=20)
+    
+    def monster_ability(self) -> None:
+        return super().monster_ability(name="Hammer Smash", damage=5)
 
-class DireWolf(Monster): pass 
 
-class Dragon(Monster): pass
+class DireWolf(Monster): 
+    def __init__(self) -> None:
+        super().__init__(name="Direwolf", damage=10, health=6)
 
-class Hydra(Monster): pass
+    def monster_ability(self) -> None:
+        return super().monster_ability(name="Quick Attack", damage=15)        
+
+class Dragon(Monster): 
+    def __init__(self) -> None:
+        super().__init__(name="Dragon", damage=12, health=24)
+    
+    def monster_ability(self) -> None:
+        return super().monster_ability(name="Flamethrower", damage=20)
+
+class Hydra(Monster): 
+    def __init__(self) -> None:
+        super().__init__(name="Hydra", damage=36, health=72)
+
+    def monster_ability(self) -> None:
+        return super().monster_ability(name="Hyperbeam", damage=50)
