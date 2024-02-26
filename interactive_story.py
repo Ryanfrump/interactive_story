@@ -6,7 +6,7 @@ import path2
 
 player_name = input("What is your name?: ")
 player_age = int(input("What is your age?: "))
-weapon_choice = 
+weapon_choice = input("What weapon do you want")
 character = Player(player_name, player_age, )
 
 
