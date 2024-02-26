@@ -3,6 +3,8 @@ class Weapon:
         self.name = name
         self.damage = damage
 
+        
+
 class Sword(Weapon):
     def __init__(self) -> None:
         super().__init__(name="Sword", damage=10)
@@ -13,7 +15,7 @@ class Wand(Weapon):
 
 class Bow(Weapon):
     def __init__(self) -> None:
-        super().__init__(name="Bow", damage=12        
+        super().__init__(name="Bow", damage=12)       
 
 
 class RustySword(Weapon):
@@ -34,4 +36,10 @@ class RustyHalberd(Weapon):
 
 weapon_list = ["Rusty Halberd", "Rusty Axe", "Throwing Star", "Rusty Sword"]
 
-        
+
+weapon_options = {
+    "rusty sword": RustySword,
+    "rusty throwing star": RustyThrowingStar,
+    "rusty axe": RustyAxe,
+    "rusty halberd": RustyHalberd
+}
