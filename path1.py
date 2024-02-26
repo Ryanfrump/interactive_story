@@ -19,7 +19,10 @@ def func_path1():
     You are our main event and will be fighting the gauntlet of monsters"""
     
     first_choice_flee = "Suddenly you wake up to find this was all a dream congratulations your lame!!"
+    first_choice_fight = """So I see we have found a warrior, you will now be faced with the gauntlet
+    which will include a series of 5 fight good luck warrior we will be watching from above.
     
+    Oh yes by the way please chose a weapon dont want to make it to unfair """
     
     
     
@@ -33,9 +36,13 @@ def func_path1():
     
     
     print(intro)
-    first_choice = input("Will you attack or flee?: ")
+    first_choice = input("Will you fight or flee?: ")
     if first_choice == "flee":
         print(first_choice_flee)
+    elif first_choice == "fight":
+        print(first_choice_fight)
+        print(Weapon.weapon_list())
+
 
 
 

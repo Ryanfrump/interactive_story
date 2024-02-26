@@ -13,10 +13,10 @@ class Player:
     @abstractmethod
     def ability(self, age: int):
         if 10<= age <=20:
-            return "Your ability is ! +2 to any flea dice roll."
+            return "Your ability is swift! +2 to any dodge dice roll."
         elif 21<= age <=30:
-            return "Your ability is enhanced combat! +2 to any combat checks."
+            return "Your ability is enhanced combat! +2 to any attack."
         elif 31<= age <=10000000000000000000000000:
-            return "Your ability is enhanced intellect! +2 to any percesption roll."
+            return "Your ability is tank! +2 to Health."
         else:
             return "No age entered, please try again."
