@@ -5,7 +5,14 @@ class Monster(ABC):
         self.health = health
         self.name = name
     
-
+    def attack(self):
+        print(f"{self.name} attacks for {self.damage} damage!")
+        return self.damage
+    
+    def take_damage(self, damage: int):
+        self.health -= damage
+        print(f"{self.name} takes {damage} damage. Health is now {self.health}.")
+    
     @abstractmethod
     def monster_ability(self, name: str, damage: int) -> None:
         pass
@@ -17,7 +24,8 @@ class Monster(ABC):
 class Goblin(Monster):
     def __init__(self) -> None:
         super().__init__(name ="Goblin", damage =1, health =4)
-        
+    def monster_ability(self, name: str, damage: int) -> None:
+        return super().monster_ability(name, damage)   
     
 
 class Orc(Monster): 
@@ -37,7 +45,7 @@ class DireWolf(Monster):
 
 class Dragon(Monster): 
     def __init__(self) -> None:
-        super().__init__(name="Dragon", damage=12, health=24)
+        super().__init__(name="Dragon", damage=18, health=24)
     
     def monster_ability(self) -> None:
         return super().monster_ability(name="Flamethrower", damage=20)
